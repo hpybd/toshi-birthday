@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaos Appreciation Society</title>
+  <meta name="description" content="A fun birthday experience with a soft landing." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top utility -->
+  <div class="topbar">
+    <div class="chip" id="statusChip">Chaos Appreciation Society — Invitation Only</div>
+
+    <div class="top-actions">
+      <button class="btn ghost" id="musicBtn" aria-pressed="false">
+        ♪ <span>Music</span> <small id="musicState">(off)</small>
+      </button>
+      <button class="btn ghost" id="restartBtn" title="Start over">Restart</button>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <article class="paper">
+      <div class="paper-inner">
+
+        <!-- Screen 1: Invitation -->
+        <section class="screen active" id="screen-invite" aria-label="Invitation">
+          <header class="hero">
+            <h1 class="title">Welcome, <span id="herName">Toshiiii</span> 😼</h1>
+            <p class="subtitle">
+              This is the <strong>Chaos Appreciation Society</strong>.<br>
+              We celebrate unforgettable laughs, dramatic entrances, and suspiciously good vibes.
+            </p>
+
+            <div class="badge">
+              <span class="dot"></span>
+              <span>Eligibility check: born on <strong>February 28</strong> ✔</span>
+            </div>
+          </header>
+
+          <div class="divider"></div>
+
+          <p class="lead">
+            This is not a normal birthday message. It’s… a situation.
+          </p>
+
+          <p>
+            Before you continue — quick vibe check. How are we doing today?
+          </p>
+
+          <div class="choices">
+            <button class="btn primary sparkle" data-mood="calm">I’m chilling</button>
+            <button class="btn primary sparkle" data-mood="overwhelmed">I’m pretending I’m chilling</button>
+          </div>
+
+          <p class="hint">
+            (Pick honestly. Either way, you’re getting pampered by words. Unavoidable.)
+          </p>
+        </section>
+
+        <!-- Screen 2: Letter -->
+        <section class="screen" id="screen-letter" aria-label="Letter">
+          <header class="section-head">
+            <h2 class="section-title">A message with options (because of course)</h2>
+            <p class="section-sub">You get to choose the tone. I get to choose the truth. Fair deal.</p>
+          </header>
+
+          <div class="letter-block" id="letterBlock"></div>
+
+          <div class="nav-row">
+            <button class="btn" id="letterNextBtn" disabled>Continue</button>
+            <button class="btn ghost" id="skipToAffirmationsBtn">Skip →</button>
+          </div>
+        </section>
+
+        <!-- Screen 3: Affirmations -->
+        <section class="screen" id="screen-affirm" aria-label="Affirmations">
+          <header class="section-head">
+            <h2 class="section-title">Emergency compliments (approved)</h2>
+            <p class="section-sub">
+              Press the button when you need a boost. Side effects may include confidence and mild smugness.
+            </p>
+          </header>
+
+          <div class="affirm-box">
+            <p class="affirm-text" id="affirmText">“You don’t need to do the most to be unforgettable.”</p>
+
+            <div class="choices">
+              <button class="btn primary sparkle" id="affirmBtn">Give me one</button>
+              <button class="btn" id="toFinalBtn">Continue</button>
+            </div>
+
+            <p class="hint">
+              If you click this 20 times, it officially counts as self-care. I don’t make the rules.
+            </p>
+          </div>
+        </section>
+
+        <!-- Screen 4: Final Conclusion (LTCA style) -->
+        <section class="screen" id="screen-final" aria-label="Final conclusion letter">
+
+          <div class="ltca-wrap">
+            <article class="ltca-letter" aria-label="Birthday letter">
+              <div class="ltca-letter-inner">
+
+                <header class="reveal">
+                  <h1 class="ltca-headline">Happy Birthday, <span id="ltcaHerName">Toshiiii</span> 🎂</h1>
+                  <p class="ltca-sub">
+                    I made you something fun on the outside — and real underneath. Because that’s very you.
+                  </p>
+                  <div class="ltca-typed" id="ltcaTypedLine" aria-live="polite"></div>
+                </header>
+
+                <section class="reveal ltca-section">
+                  <h2 class="ltca-section-title">A proper birthday note</h2>
+                  <p>Dear <strong>Toshi</strong>,</p>
+                  <p>
+                    Today isn’t just a date — it’s a reminder that the world got noticeably better when you showed up in it.
+                    You have that rare combination of sparkle and backbone. The kind that makes people laugh… and also
+                    keeps them from acting foolish. (A public service, really.)
+                  </p>
+                  <p>
+                    And for the record — you make it look effortless. I know it isn’t. That’s why I respect it.
+                  </p>
+                </section>
+
+                <section class="reveal ltca-section">
+                  <h2 class="ltca-section-title">Three things I genuinely appreciate</h2>
+                  <p>1) <strong>Your energy.</strong> It’s fun, fearless, and contagious — in the best way.</p>
+                  <p>2) <strong>Your depth.</strong> You feel more than you show. I notice.</p>
+                  <p>3) <strong>Your presence.</strong> You walk in and the room improves. Annoying talent, honestly.</p>
+                  <p class="ltca-muted">
+                    (Yes, I’m being serious. Don’t ruin it by making a joke. Or do. That’s also very you.)
+                  </p>
+                </section>
+
+                <section class="reveal ltca-section">
+                  <h2 class="ltca-section-title">Some Classics</h2>
+
+                  <div class="ltca-gallery">
+                    <figure class="ltca-card reveal">
+                      <img src="Photo1.jpeg" alt="Memory photo 1">
+                      <figcaption class="ltca-caption">Sourced responsibly from the public record of your greatness.</figcaption>
+                    </figure>
+
+                    <figure class="ltca-card reveal">
+                      <img src="Photo2.png" alt="Memory photo 2">
+                      <figcaption class="ltca-caption">Found this while doing extremely serious research.</figcaption>
+                    </figure>
+                  </div>
+                </section>
+
+                <section class="reveal ltca-section" id="ltcaEnd">
+                  <h2 class="ltca-section-title">One last thing</h2>
+                  <p>
+                    You act like you don’t care — which is exactly how I know you care. And that’s not a weakness.
+                    That’s a heart with standards.
+                  </p>
+                  <p>
+                    If you ever forget how loved you are, come back to this page. It will still be here.
+                    Like a good friend should be.
+                  </p>
+
+                  <div class="ltca-signature">
+                    <div>
+                      <div class="ltca-sign">— <span id="ltcaYourName">The Annoying Presence</span></div>
+                      <div class="ltca-date" id="ltcaTodayDate"></div>
+                    </div>
+
+                    <div class="ltca-surprise">
+                      <button class="btn sparkle" id="ltcaSurpriseBtn">Open your surprise ✨</button>
+                      <button class="btn ghost" id="endRestartBtn">Start again</button>
+                    </div>
+                  </div>
+                </section>
+
+              </div>
+            </article>
+          </div>
+
+          <!-- LTCA Modal -->
+          <div class="ltca-modal-backdrop" id="ltcaModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="ltcaModalTitle">
+            <div class="ltca-modal">
+              <header class="ltca-modal-head">
+                <h3 id="ltcaModalTitle">Surprise ✨</h3>
+              </header>
+              <div class="ltca-modal-body">
+                A small gift from my side:
+                <ul>
+                  <li>When I get an opportunity to meet you in person I will give you :)</li>
+                </ul>
+              </div>
+              <div class="ltca-modal-actions">
+                <button class="btn" id="ltcaCloseModalBtn">Close</button>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- Optional music: put song.mp3 next to index.html -->
+  <audio id="bgMusic" preload="none" loop>
+    <source src="song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
